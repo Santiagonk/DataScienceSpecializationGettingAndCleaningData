@@ -100,3 +100,8 @@ head(df_group_activity)
 df_group_subject <- df %>% group_by(df$subject) %>% 
   summarise_if(is.numeric, mean)
 head(df_group_subject)
+
+
+# Write data_set ----------------------------------------------------------
+write.table(df_group_act_subj, "data/output.txt")
+
